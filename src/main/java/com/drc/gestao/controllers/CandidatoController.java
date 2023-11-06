@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/candidato")
 public class CandidatoController {
 
-    @PostMapping("/"){
+    //@PostMapping("/"){
 
-    }
+    //}
 }

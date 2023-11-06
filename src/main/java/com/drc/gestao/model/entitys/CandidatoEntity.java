@@ -1,17 +1,29 @@
 package com.drc.gestao.model.entitys;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
+
 import java.util.UUID;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Data
 @Entity(name = "candidato")
 public class CandidatoEntity {
 
+    @Id
+    @GeneratedValue(generator = "UUID")
     private UUID id;
     private String nome;
 
