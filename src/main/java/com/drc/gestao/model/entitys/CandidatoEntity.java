@@ -10,9 +10,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @NoArgsConstructor
@@ -38,5 +40,8 @@ public class CandidatoEntity {
     private String password;
     private String descricao;
     private String curriculo;
+
+    @CreationTimestamp
+    private LocalDateTime dataDaCriacao;
 }
 
