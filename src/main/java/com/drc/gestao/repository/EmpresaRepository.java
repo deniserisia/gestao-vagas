@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface EmpresaRepository extends JpaRepository<EmpresaEntity, UID> {
 
     Optional<EmpresaEntity> findByUsernameOrEmail(String username, String email);
+    Optional<EmpresaEntity> findByUsername(String username);
 }
